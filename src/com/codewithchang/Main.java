@@ -3,6 +3,7 @@ package com.codewithchang;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println(isLeapYear(1600));
     }
 
     public static boolean isLeapYear(int year) {
@@ -25,7 +26,9 @@ public class Main {
             return -1;
         } else if(year < 1 || year > 9999) {
             return -1;
-        } else if
+        } else if(isLeapYear(year) == true) {
+
+        }
     }
 
 }
