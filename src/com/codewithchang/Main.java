@@ -3,35 +3,14 @@ package com.codewithchang;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(isLeapYear(-1600));
+//        System.out.println("10,000 at 2% interest = " + calculateInterest(10000.0, 2.0));
+
+        for(int i = 2; i < 9; i++) {
+            System.out.println("10,000 at " + i + "% interest = " + calculateInterest(10000.0, i));
+        }
     }
 
-    public static boolean isLeapYear(int year) {
-
-        if (year >= 1 && year <= 9999) {
-
-            switch (year) {
-                case 0:
-                    if (year % 4 == 0 || year % 100 != 0 || year % 400 == 0) {
-                        System.out.println("True");
-                        break;
-                    }
-
-                default:
-                    return false;
-            }
-
-//
-//    public static int getDaysInMonth(int month, int year) {
-//        if(month < 1 || month > 12) {
-//            return -1;
-//        } else if(year < 1 || year > 9999) {
-//            return -1;
-//        } else if(isLeapYear(year) == true) {
-//
-//        }
-//    }
-        }
-        return false;
+    public static double calculateInterest(double amount, double interestRate) {
+        return(amount *(interestRate/100));
     }
 }
